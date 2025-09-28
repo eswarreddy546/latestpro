@@ -3,7 +3,7 @@ userid=$(id -u)
 
 if [ $userid -ne 0 ]; then
 
-Dir=$pwd
+Dir=$(pwd)
 
 echo "error : you have not root privelage acess"
 
@@ -37,6 +37,8 @@ $Dir
 mkdir /app 
 
 curl -L -o /tmp/cart.zip https://roboshop-artifacts.s3.amazonaws.com/cart-v3.zip
+
+$Dir
 cd /app 
 unzip /tmp/cart.zip
 
