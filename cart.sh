@@ -1,4 +1,7 @@
 #!/bin/bash
+
+trap 'echo "Error at line $LINENO: command exited with status $?"' ERR
+
 userid=$(id -u)
 
 if [ $userid -ne 0 ]; then
