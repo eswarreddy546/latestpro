@@ -56,17 +56,17 @@ cd /app
 npm install 
 valid $? "npm is sucessfully installed"
 
-
+cp $Dir cart.service /etc/systemd/system/cart.service
+valid $? "Move sucessfully completed"
 
 systemctl daemon-reload
-valid $? "daemon-reload"
-
-
 systemctl enable cart 
-valid $? "enable cart "
+
+valid $? "enable and daemon-reload"
+
+
 
 systemctl start cart
 valid $? "startcart"
 
 
-#cp cart.service/etc/systemd/system/cart.service
