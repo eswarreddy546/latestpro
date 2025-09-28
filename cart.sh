@@ -39,12 +39,17 @@ useradd --system --home /app --shell /sbin/nologin --comment "roboshop system us
 $Dir
 mkdir /app 
 
+
 curl -L -o /tmp/cart.zip https://roboshop-artifacts.s3.amazonaws.com/cart-v3.zip
 
 $Dir
 cd /app 
-unzip /tmp/cart.zip
 
+rm -rf /app/*
+VALIDATE $? "Removing existing code"
+
+unzip /tmp/cart.zip
+valid $? "unzip the file"
 $Dir
 cd /app 
 
@@ -62,3 +67,6 @@ valid $? "enable cart "
 
 systemctl start cart
 valid $? "startcart"
+
+
+cp cart.service/etc/systemd/system/cart.service
