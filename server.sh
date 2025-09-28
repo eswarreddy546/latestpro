@@ -1,7 +1,7 @@
 #!/bin/bash
 
 AMI_ID="ami-09c813fb71547fc4f"
-SG_ID="sg-09e6d5d974000ccad" # replace with your SG ID
+SG_ID="sg-02024690b55f0ae4f" # replace with your SG ID
 ZONE_ID="Z09171802WMG1PN14CHET" # replace with your ID
 DOMAIN_NAME="eswar.xyz"
 
