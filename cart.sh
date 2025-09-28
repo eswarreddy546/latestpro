@@ -69,4 +69,4 @@ systemctl start cart
 valid $? "startcart"
 
 
-cp cart.service/etc/systemd/system/cart.service
+#cp cart.service/etc/systemd/system/cart.service
