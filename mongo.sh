@@ -21,6 +21,11 @@ valid() {
 
 }
 
+
+cp mongo.repo/vim /etc/yum.repos.d/mongo.repo
+valid $? "sucessfully moveed the daata"
+
+
 dnf install mongodb-org -y 
 valid $? "insall mongodb"
 
