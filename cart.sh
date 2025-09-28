@@ -3,10 +3,10 @@
 trap 'echo "Error at line $LINENO: command exited with status $?"' ERR
 
 userid=$(id -u)
+Dir=$(pwd)
 
 if [ $userid -ne 0 ]; then
 
-Dir=$(pwd)
 
 echo "error : you have not root privelage acess"
 
