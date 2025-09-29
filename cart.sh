@@ -48,10 +48,8 @@ cd /app
 rm -rf /app/*
 VALIDATE $? "Removing existing code"
 
-unzip $Dir/tmp/cart.zip
+unzip /tmp/cart.zip
 valid $? "unzip the file"
-
-cd /app 
 
 npm install 
 valid $? "npm is sucessfully installed"
