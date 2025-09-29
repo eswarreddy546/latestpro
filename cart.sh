@@ -54,7 +54,7 @@ valid $? "unzip the file"
 npm install 
 valid $? "npm is sucessfully installed"
 
-cp cart.service /etc/systemd/system/cart.service
+cp $Dir/cart.service /etc/systemd/system/cart.service
 valid $? "Move sucessfully completed"
 
 systemctl daemon-reload
