@@ -36,20 +36,21 @@ dnf install nodejs -y
 valid $? "Install nodejs"
 
 useradd --system --home /app --shell /sbin/nologin --comment "roboshop system user" roboshop
-$Dir
-mkdir /app 
+
+mkdir -p /app 
+valid $? "directory process p"
 
 
 curl -L -o /tmp/cart.zip https://roboshop-artifacts.s3.amazonaws.com/cart-v3.zip
 
-$Dir
 cd /app 
 
 rm -rf /app/*
 VALIDATE $? "Removing existing code"
 
-unzip /tmp/cart.zip
+unzip $Dir/tmp/cart.zip
 valid $? "unzip the file"
+
 $Dir
 cd /app 
 
