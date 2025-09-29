@@ -51,7 +51,6 @@ VALIDATE $? "Removing existing code"
 unzip $Dir/tmp/cart.zip
 valid $? "unzip the file"
 
-$Dir
 cd /app 
 
 npm install 
